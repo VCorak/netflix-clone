@@ -7,7 +7,6 @@ import Nav from "./Nav";
 
 import "./App.css";
 
-const dotenv = require('dotenv').config();
 
 function App() {
   return (
