@@ -1,0 +1,44 @@
+.row {
+  color: white;
+  margin-left: 20px;
+}
+
+.row__title {
+    color: var(--color);
+    font-size: 1.4rem;
+    line-height: 1.25vw;
+    padding: var(--padding);
+}
+
+.row__posters {
+  /*display: flex; moves columns in rows */
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll; /* scroll is added in the row, so just the row moves not the whole screen*/
+  padding: 20px; /* so the hover effect is seen, it moves scroller a bit down... */
+}
+
+.row__posters::-webkit-scrollbar {
+  /* says to all browsers: keep the scroolbars but make them invisible */
+  display: none;
+}
+
+.row__poster {
+  width: 100%;
+  object-fit: contain;
+  max-height: 100px;
+  transition: transform 450ms; /*if we ever change size it will transform nicely, like in hover efect which we used down, when we hover picture will "grow"*/
+  margin-right: 10px;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
